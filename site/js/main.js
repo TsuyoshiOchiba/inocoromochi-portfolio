@@ -20,9 +20,16 @@ function createNav(activePage) {
     return '<a href="' + p.href + '"' + cls + '>' + p.label + '</a>';
   }).join('');
 
-  nav.innerHTML = 
+  nav.innerHTML =
     '<a href="' + base + 'index.html" class="nav-logo">いのころもち.com</a>' +
+    '<button class="nav-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>' +
     '<div class="nav-links">' + linksHtml + '</div>';
+
+  var toggle = nav.querySelector('.nav-toggle');
+  toggle.addEventListener('click', function() {
+    var isOpen = nav.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
 }
 
 /* Footer */
