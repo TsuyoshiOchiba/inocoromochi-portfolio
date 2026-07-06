@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -File \".claude/hooks/check-edit-session.ps1\"",
+            "shell": "powershell",
+            "timeout": 15,
+            "statusMessage": "編集セッションを確認中..."
+          }
+        ]
+      }
+    ]
+  }
+}
