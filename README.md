@@ -12,11 +12,9 @@ site/
 ├── music/
 │   ├── espoir.html          楽曲詳細
 │   └── tanpopo.html         楽曲詳細
-├── history.html             歴史学探索 一覧
+├── history.html             住吉考 一覧
 ├── history/
-│   ├── article1.html        記事詳細
-│   ├── article2.html
-│   └── article3.html
+│   └── sumiyoshi-tanjouseki.html   記事詳細
 ├── about.html                About（キャラ紹介・SNS）
 ├── css/style.css             全ページ共通スタイル
 ├── js/main.js                 共通ナビ・フッターの動的生成
@@ -52,10 +50,10 @@ site/
 4. `site/music.html` の `.music-cards` にカードを追加（サムネイルURLも同じYouTube IDから生成: `https://img.youtube.com/vi/{ID}/maxresdefault.jpg`）
 
 ### 歴史記事を追加する
-1. `site/history/` に既存ファイル（例: `article1.html`）をコピーして新規作成
+1. `site/history/` に既存ファイル（例: `sumiyoshi-tanjouseki.html`）をコピーして新規作成
 2. タイトル・日付・本文を編集
 3. `site/history.html` の `.article-list` に記事カードを追加
-4. `site/index.html` の「歴史学探索 — 最新の記事」セクションを最新3件に更新
+4. `site/index.html` の「住吉考 — 最新の記事」セクションを最新記事で更新
 
 ### 新しいプロダクト（カテゴリ）を追加する
 1. 専用HTMLページを作成
@@ -68,7 +66,7 @@ site/
 詳細は `DESIGN_SYSTEM.md` を参照。特に注意すべき点:
 
 - 使用フォントは `Zen Maru Gothic`（見出し・UI）と `Klee One`（本文）のみ
-- パレット外の色は使わない（カテゴリカラー: プロダクト=テラコッタ `#c4956a` / 作曲活動=セージグリーン `#8b9e7a` / 歴史学探索=モカ `#9b8a7a`）
+- パレット外の色は使わない（カテゴリカラー: プロダクト=テラコッタ `#c4956a` / 作曲活動=セージグリーン `#8b9e7a` / 住吉考=モカ `#9b8a7a`）
 - 日本語本文の `line-height` は 2.0 以上を確保
 - サイト左右のパディングは常に `48px`（レスポンシブ時は `24px`）
 - コンテンツ幅は `max-width: 780–820px` + `margin: 0 auto`
