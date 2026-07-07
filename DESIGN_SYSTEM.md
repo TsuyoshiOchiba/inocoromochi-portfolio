@@ -26,14 +26,14 @@
 |----------|-------|------|------|
 | プロダクト | テラコッタ | `#c4956a` | バッジ背景、リンク色、ホバー |
 | 作曲活動 | セージグリーン | `#8b9e7a` | バッジ背景、リンク色、ホバー |
-| 歴史学探索 | モカ | `#9b8a7a` | バッジ背景、リンク色、ホバー |
+| 住吉考 | モカ | `#9b8a7a` | バッジ背景、リンク色、ホバー |
 
 ### カテゴリ背景（カードサムネイル等）
 | カテゴリ | 値 |
 |----------|------|
 | プロダクト | `#f5f0ea` |
 | 作曲活動 | `#f0ece8` |
-| 歴史学探索 | `#ece8e2` |
+| 住吉考 | `#ece8e2` |
 
 ---
 
@@ -124,7 +124,7 @@ text-transform: uppercase; /* 英語の場合 */
 再生ボタンオーバーレイ: 48px円, 白90%透過
 ```
 
-### 記事カード（歴史学探索一覧）
+### 記事カード（住吉考一覧）
 ```
 横幅: 100%（max-width内）
 パディング: 20px 24px
@@ -188,7 +188,7 @@ text-transform: uppercase; /* 英語の場合 */
 | `inocoromochi-a.png` | メインキャラクター（トップ・About） |
 | `inocoromochi-b.png` | かわらばん用キャラクター |
 | `inocoromochi-c.png` | 作曲活動用キャラクター |
-| `inocoromochi-d.png` | 歴史学探索用キャラクター |
+| `inocoromochi-d.png` | 住吉考用キャラクター |
 
 ### 画像表示サイズ基準
 - ヒーロー（トップ）: 300px幅
@@ -234,8 +234,8 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 /music.html              — 作曲活動一覧: カードグリッド
 /music/espoir.html       — 楽曲詳細: YouTube埋め込み + 説明
 /music/tanpopo.html      — 楽曲詳細
-/history.html            — 歴史学探索一覧: 記事リスト
-/history/article1.html   — 記事詳細テンプレート
+/history.html            — 住吉考一覧: 記事リスト
+/history/sumiyoshi-tanjouseki.html — 記事詳細テンプレート
 /kawaraban.html          — かわらばん紹介: ヒーロー + 特徴
 /about.html              — About: キャラ紹介 + バリエーション + SNS
 ```

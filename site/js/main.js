@@ -11,7 +11,7 @@ function createNav(activePage) {
   var pages = [
     { href: base + 'kawaraban.html', label: 'プロダクト', active: 'product' },
     { href: base + 'music.html', label: '作曲活動', active: 'music' },
-    { href: base + 'history.html', label: '歴史学探索', active: 'history' },
+    { href: base + 'history.html', label: '住吉考', active: 'history' },
     { href: base + 'about.html', label: 'About', active: 'about' },
   ];
   
