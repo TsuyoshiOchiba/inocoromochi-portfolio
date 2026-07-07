@@ -40,9 +40,9 @@ function createFooter() {
   footer.innerHTML = 
     '<span class="footer-copy">© ' + new Date().getFullYear() + ' いのころもち.com</span>' +
     '<div class="footer-links">' +
-      '<a href="#">X / Twitter</a>' +
-      '<a href="#">GitHub</a>' +
-      '<a href="#">YouTube</a>' +
+      '<a href="https://x.com/inocoro_com" target="_blank" rel="noopener noreferrer">X / Twitter</a>' +
+      '<a href="https://github.com/TsuyoshiOchiba/inocoromochi-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>' +
+      '<a href="https://www.youtube.com/@tsuyoshiochiba1009" target="_blank" rel="noopener noreferrer">YouTube</a>' +
     '</div>';
 }
 
