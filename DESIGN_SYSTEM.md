@@ -27,6 +27,7 @@
 | プロダクト | テラコッタ | `#c4956a` | バッジ背景、リンク色、ホバー |
 | 作曲活動 | セージグリーン | `#8b9e7a` | バッジ背景、リンク色、ホバー |
 | 住吉考 | モカ | `#9b8a7a` | バッジ背景、リンク色、ホバー |
+| なかまたち | ダスティローズ | `#b98a95` | バッジ背景、リンク色、ホバー |
 
 ### カテゴリ背景（カードサムネイル等）
 | カテゴリ | 値 |
@@ -34,6 +35,7 @@
 | プロダクト | `#f5f0ea` |
 | 作曲活動 | `#f0ece8` |
 | 住吉考 | `#ece8e2` |
+| なかまたち | `#f3efe9` |
 
 ---
 
@@ -189,6 +191,10 @@ text-transform: uppercase; /* 英語の場合 */
 | `inocoromochi-b.png` | かわらばん用キャラクター |
 | `inocoromochi-c.png` | 作曲活動用キャラクター |
 | `inocoromochi-d.png` | 住吉考用キャラクター |
+| `friend-piyokoromochi.png` | ゆかいな仲間たち: ぴよころもち |
+| `friend-pute.png` | ゆかいな仲間たち: ぷて |
+| `friend-kappa.png` | ゆかいな仲間たち: かっぱ |
+| `friend-nyankoromochi.png` | ゆかいな仲間たち: にゃんころもち |
 
 ### 画像表示サイズ基準
 - ヒーロー（トップ）: 300px幅
@@ -230,13 +236,14 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 ## ページ構成
 
 ```
-/ (index.html)           — トップ: ヒーロー + 3カテゴリカード + 最新記事
+/ (index.html)           — トップ: ヒーロー + 4カテゴリカード + 最新記事
 /music.html              — 作曲活動一覧: カードグリッド
 /music/espoir.html       — 楽曲詳細: YouTube埋め込み + 説明
 /music/tanpopo.html      — 楽曲詳細
 /history.html            — 住吉考一覧: 記事リスト
 /history/sumiyoshi-tanjouseki.html — 記事詳細テンプレート
 /kawaraban.html          — かわらばん紹介: ヒーロー + 特徴
+/friends.html            — なかまたち一覧: 仲間キャラ紹介カード一覧（独立カテゴリ）
 /about.html              — About: キャラ紹介 + バリエーション + SNS
 ```
 
@@ -260,6 +267,11 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 1. 専用HTMLページを作成
 2. キャラクター画像を `assets/images/` に追加
 3. `index.html` のカテゴリカードセクションに追加
+
+### 新しい仲間キャラクターを追加する
+1. キャラクター画像を `assets/images/` に `friend-〇〇.png` として追加
+2. `friends.html` の `.friend-grid` に `.friend-card`（画像＋名前＋キャッチコピー＋紹介文）を追加
+3. 必要であれば `index.html` のなかまたちカードのサムネイル画像を差し替え
 
 ---
 

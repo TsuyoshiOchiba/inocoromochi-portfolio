@@ -40,6 +40,7 @@ img { display: block; max-width: 100%; }
 .nav-links a.active-product { color: #c4956a; border-bottom: 2px solid #c4956a; padding-bottom: 2px; }
 .nav-links a.active-music { color: #8b9e7a; border-bottom: 2px solid #8b9e7a; padding-bottom: 2px; }
 .nav-links a.active-history { color: #9b8a7a; border-bottom: 2px solid #9b8a7a; padding-bottom: 2px; }
+.nav-links a.active-friends { color: #b98a95; border-bottom: 2px solid #b98a95; padding-bottom: 2px; }
 .nav-links a.active-about { color: #3a3632; border-bottom: 2px solid #3a3632; padding-bottom: 2px; }
 
 /* Nav toggle (hamburger, mobile only) */
@@ -80,6 +81,7 @@ img { display: block; max-width: 100%; }
 .badge-product { background: #c4956a; }
 .badge-music { background: #8b9e7a; }
 .badge-history { background: #9b8a7a; }
+.badge-friends { background: #b98a95; }
 .badge-outline {
   background: transparent; color: #9b8a7a;
   border: none; font-size: 9px;
@@ -262,6 +264,23 @@ img { display: block; max-width: 100%; }
 .kawaraban-hero-text { flex: 1; max-width: 380px; }
 .kawaraban-features { padding: 56px 48px 64px; max-width: 780px; margin: 0 auto; }
 
+/* Friend cards (friends page) */
+.friend-grid { display: flex; flex-direction: column; gap: 20px; }
+.friend-card {
+  display: flex; align-items: center; gap: 28px;
+  padding: 28px 32px; background: #fff; border: 1px solid rgba(58,54,50,0.06); border-radius: 16px;
+}
+.friend-card-thumb {
+  flex: none; width: 140px; height: 140px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.friend-card-thumb img { width: 110px; height: auto; object-fit: contain; }
+.friend-card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.friend-card-catch { font-family: 'Klee One', sans-serif; font-size: 13px; font-weight: 600; color: #c4956a; margin-bottom: 10px; }
+.friend-card-body p { font-family: 'Klee One', sans-serif; font-size: 14px; color: rgba(58,54,50,0.60); line-height: 2.0; }
+.friends-cta-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #c4956a; transition: color 0.2s; }
+.friends-cta-link:hover { color: #a97b4f; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav { padding: 16px 24px; }
@@ -287,6 +306,9 @@ img { display: block; max-width: 100%; }
   .kawaraban-hero { flex-direction: column; padding: 32px 24px 0; gap: 20px; text-align: center; }
   .kawaraban-hero-img { width: 190px; }
   .kawaraban-hero-text { max-width: 100%; }
+  .friend-card { flex-direction: column; text-align: center; padding: 24px; }
+  .friend-card-thumb { width: 120px; height: 120px; }
+  .friend-card-thumb img { width: 96px; }
 }
 
 @media (max-width: 480px) {
