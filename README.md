@@ -6,7 +6,7 @@
 
 ```
 site/
-├── index.html              トップページ（ヒーロー + 3カテゴリカード + 最新記事）
+├── index.html              トップページ（ヒーロー + 4カテゴリカード + 最新記事）
 ├── kawaraban.html           プロダクト紹介（かわらばん）
 ├── music.html               作曲活動 一覧
 ├── music/
@@ -17,6 +17,7 @@ site/
 │   ├── ikkyu-shousaian.html        記事詳細
 │   ├── ikune-tanabata-okuri.html   記事詳細
 │   └── sumiyoshi-tanjouseki.html   記事詳細
+├── friends.html             ゆかいな仲間たち 一覧
 ├── about.html                About（キャラ紹介・SNS）
 ├── css/style.css             全ページ共通スタイル
 ├── js/main.js                 共通ナビ・フッターの動的生成
@@ -68,7 +69,7 @@ site/
 詳細は `DESIGN_SYSTEM.md` を参照。特に注意すべき点:
 
 - 使用フォントは `Zen Maru Gothic`（見出し・UI）と `Klee One`（本文）のみ
-- パレット外の色は使わない（カテゴリカラー: プロダクト=テラコッタ `#c4956a` / 作曲活動=セージグリーン `#8b9e7a` / 住吉考=モカ `#9b8a7a`）
+- パレット外の色は使わない（カテゴリカラー: プロダクト=テラコッタ `#c4956a` / 作曲活動=セージグリーン `#8b9e7a` / 住吉考=モカ `#9b8a7a` / なかまたち=ダスティローズ `#b98a95`）
 - 日本語本文の `line-height` は 2.0 以上を確保
 - サイト左右のパディングは常に `48px`（レスポンシブ時は `24px`）
 - コンテンツ幅は `max-width: 780–820px` + `margin: 0 auto`
