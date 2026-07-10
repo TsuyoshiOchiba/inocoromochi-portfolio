@@ -14,6 +14,8 @@ site/
 │   └── tanpopo.html         楽曲詳細
 ├── history.html             住吉考 一覧
 ├── history/
+│   ├── ikkyu-shousaian.html        記事詳細
+│   ├── ikune-tanabata-okuri.html   記事詳細
 │   └── sumiyoshi-tanjouseki.html   記事詳細
 ├── about.html                About（キャラ紹介・SNS）
 ├── css/style.css             全ページ共通スタイル
