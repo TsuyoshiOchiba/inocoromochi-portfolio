@@ -72,9 +72,3 @@ site/
 - 日本語本文の `line-height` は 2.0 以上を確保
 - サイト左右のパディングは常に `48px`（レスポンシブ時は `24px`）
 - コンテンツ幅は `max-width: 780–820px` + `margin: 0 auto`
-
-## デプロイ
-
-`site/` フォルダの中身がそのまま公開ルートになる。GitHub Pages / Netlify / Vercel などの静的ホスティングにデプロイする場合は、公開ディレクトリを `site/` に設定する。
-
-リポジトリ: https://github.com/TsuyoshiOchiba/inocoromochi-portfolio
