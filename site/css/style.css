@@ -263,6 +263,72 @@ img { display: block; max-width: 100%; }
 .kawaraban-hero-img { width: 280px; height: auto; object-fit: contain; filter: drop-shadow(0 4px 20px rgba(58,54,50,0.08)); }
 .kawaraban-hero-text { flex: 1; max-width: 380px; }
 .kawaraban-features { padding: 56px 48px 64px; max-width: 780px; margin: 0 auto; }
+.kawaraban-section-title { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 28px; }
+
+/* Engine badge (hero) */
+.engine-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #232a3d; color: #e8b969; border: 1px solid rgba(232,185,105,0.35);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  padding: 5px 12px; border-radius: 20px;
+  box-shadow: 0 0 12px rgba(232,185,105,0.18);
+}
+
+/* How it works (3-step flow) */
+.kawaraban-steps { padding: 0 48px 56px; max-width: 780px; margin: 0 auto; }
+.step-cards { display: flex; align-items: flex-start; justify-content: center; gap: 8px; }
+.step-card { flex: 1; max-width: 200px; text-align: center; }
+.step-number {
+  width: 36px; height: 36px; margin: 0 auto 12px; border-radius: 50%;
+  background: #3a3632; color: #fff; font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.step-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.step-card p { font-family: 'Klee One', sans-serif; font-size: 12px; color: rgba(58,54,50,0.45); line-height: 1.7; }
+.step-arrow { flex: none; padding-top: 8px; color: rgba(58,54,50,0.25); font-size: 18px; }
+
+/* Engine section (kawaraban) */
+.engine-section {
+  background: linear-gradient(160deg, #10182b 0%, #1c2740 100%);
+  padding: 56px 48px; text-align: center;
+}
+.engine-section-inner { max-width: 780px; margin: 0 auto; }
+.engine-section .engine-badge { margin-bottom: 18px; }
+.engine-banner {
+  width: 100%; max-width: 640px; height: auto; margin: 24px auto 0; display: block;
+  border-radius: 14px; border: 1px solid rgba(232,185,105,0.25);
+  box-shadow: 0 0 40px rgba(90,140,220,0.20), 0 12px 32px rgba(0,0,0,0.35);
+}
+.engine-section h2 { color: #f3ede2; font-size: 20px; font-weight: 700; }
+.engine-section p {
+  font-family: 'Klee One', sans-serif; font-size: 13px; color: rgba(243,237,226,0.55);
+  line-height: 1.9; margin-top: 14px; max-width: 480px; margin-left: auto; margin-right: auto;
+}
+
+/* Pricing */
+.kawaraban-pricing { padding: 56px 48px 8px; max-width: 820px; margin: 0 auto; }
+.kawaraban-section-lead { font-size: 13px; color: rgba(58,54,50,0.45); text-align: center; margin-top: -16px; margin-bottom: 28px; }
+.pricing-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pricing-card {
+  background: #fff; border: 1px solid rgba(58,54,50,0.08);
+  border-radius: 14px; padding: 24px 18px; text-align: center;
+}
+.pricing-plan-name { font-size: 17px; font-weight: 700; }
+.pricing-plan-reading { display: block; font-family: 'Klee One', sans-serif; font-size: 11px; font-weight: 400; color: rgba(58,54,50,0.35); margin-top: 2px; }
+.pricing-price { margin-top: 12px; }
+.pricing-price strong { font-size: 22px; font-weight: 900; }
+.pricing-price-unit { font-size: 12px; color: rgba(58,54,50,0.50); }
+.pricing-price-note { display: block; font-family: 'Klee One', sans-serif; font-size: 10px; color: rgba(58,54,50,0.30); margin-top: 2px; }
+.pricing-detail { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(58,54,50,0.06); }
+.pricing-detail dl { display: flex; flex-direction: column; gap: 8px; }
+.pricing-detail dt { font-family: 'Klee One', sans-serif; font-size: 10px; color: rgba(58,54,50,0.35); }
+.pricing-detail dd { font-family: 'Klee One', sans-serif; font-size: 12px; color: rgba(58,54,50,0.60); line-height: 1.6; }
+.pricing-notes { max-width: 520px; margin: 24px auto 0; }
+.pricing-notes p { font-size: 11px; color: rgba(58,54,50,0.35); line-height: 1.8; }
+
+/* Closing CTA (kawaraban) */
+.kawaraban-cta { padding: 56px 48px 72px; max-width: 780px; margin: 0 auto; text-align: center; }
+.kawaraban-cta p { font-family: 'Klee One', sans-serif; font-size: 13px; color: rgba(58,54,50,0.45); margin-bottom: 20px; }
 
 /* Friend cards (friends page) */
 .friend-grid { display: flex; flex-direction: column; gap: 20px; }
@@ -306,6 +372,15 @@ img { display: block; max-width: 100%; }
   .kawaraban-hero { flex-direction: column; padding: 32px 24px 0; gap: 20px; text-align: center; }
   .kawaraban-hero-img { width: 190px; }
   .kawaraban-hero-text { max-width: 100%; }
+  .kawaraban-steps { padding: 0 24px 40px; }
+  .step-cards { flex-direction: column; align-items: center; gap: 24px; }
+  .step-card { max-width: 260px; }
+  .step-arrow { transform: rotate(90deg); padding: 0; }
+  .engine-section { padding: 40px 24px; }
+  .kawaraban-pricing { padding: 40px 24px 8px; }
+  .pricing-cards { grid-template-columns: repeat(2, 1fr); }
+  .pricing-card { max-width: none; }
+  .kawaraban-cta { padding: 40px 24px 56px; }
   .friend-card { flex-direction: column; text-align: center; padding: 24px; }
   .friend-card-thumb { width: 120px; height: 120px; }
   .friend-card-thumb img { width: 96px; }

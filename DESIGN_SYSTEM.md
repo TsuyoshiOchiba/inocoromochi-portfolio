@@ -37,6 +37,14 @@
 | 住吉考 | `#ece8e2` |
 | なかまたち | `#f3efe9` |
 
+### エンジン演出アクセント（かわらばんページ限定）
+「一言主エンジン」を演出するための特別配色。他ページ・他コンポーネントには流用しない、`kawaraban.html` 内の `.engine-badge` / `.engine-section` に閉じたアクセント。
+| 用途 | 値 |
+|------|------|
+| 背景（ダーク） | `linear-gradient(160deg, #10182b, #1c2740)` |
+| バッジ背景 | `#232a3d` |
+| ゴールドテキスト/ボーダー | `#e8b969` |
+
 ---
 
 ## タイポグラフィ
@@ -191,6 +199,7 @@ text-transform: uppercase; /* 英語の場合 */
 | `inocoromochi-b.png` | かわらばん用キャラクター |
 | `inocoromochi-c.png` | 作曲活動用キャラクター |
 | `inocoromochi-d.png` | 住吉考用キャラクター |
+| `kawaraban-hitokotonushi-engine.png` | かわらばん「一言主エンジン」演出バナー（`.engine-section`専用） |
 | `friend-piyokoromochi.png` | ゆかいな仲間たち: ぴよころもち |
 | `friend-pute.png` | ゆかいな仲間たち: ぷて |
 | `friend-kappa.png` | ゆかいな仲間たち: かっぱ |
