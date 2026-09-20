@@ -1,0 +1,9 @@
+name = "inocoromochi-portfolio"
+pages_build_output_dir = "site"
+compatibility_date = "2024-09-23"
+
+# Pages Function 用の Email 送信バインディング
+# ダッシュボードからも設定可: Pages > Settings > Functions > Email bindings
+[[send_email]]
+name = "SEND_EMAIL"
+destination_address = "info@inocoromochi.com"
