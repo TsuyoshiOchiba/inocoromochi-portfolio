@@ -26,24 +26,13 @@ function buildRawEmail({ from, to, replyTo, subject, body }) {
 }
 
 export async function onRequestPost({ request, env }) {
-  const origin = request.headers.get('Origin') || '';
-  const headers = {
-    'Access-Control-Allow-Origin': origin,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
-
-  if (request.method === 'OPTIONS') {
-    return new Response(null, { headers });
-  }
-
   try {
     const data = await request.json();
 
     if (!data.name || !data.email || !data.subject || !data.message) {
       return Response.json(
         { error: '必須項目を入力してください。' },
-        { status: 400, headers }
+        { status: 400 }
       );
     }
 
@@ -51,7 +40,7 @@ export async function onRequestPost({ request, env }) {
     if (!emailRegex.test(data.email)) {
       return Response.json(
         { error: 'メールアドレスの形式が正しくありません。' },
-        { status: 400, headers }
+        { status: 400 }
       );
     }
 
@@ -75,12 +64,12 @@ export async function onRequestPost({ request, env }) {
     );
     await env.SEND_EMAIL.send(message);
 
-    return Response.json({ ok: true }, { headers });
+    return Response.json({ ok: true });
   } catch (err) {
     console.error('Contact form error:', err);
     return Response.json(
       { error: '送信に失敗しました。時間をおいて再度お試しください。' },
-      { status: 500, headers }
+      { status: 500 }
     );
   }
 }

@@ -99,7 +99,7 @@
 
 ### ナビゲーションバー
 ```
-構成: ロゴ（左） | ナビリンク4つ（右）
+構成: ロゴ（左） | ナビリンク5つ（右）
 高さ: padding 20px 48px
 下線: 1px solid rgba(58,54,50,0.06)
 アクティブ状態: カテゴリカラー + 下線2px solid
@@ -254,6 +254,8 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 /kawaraban.html          — かわらばん紹介: ヒーロー + 特徴
 /friends.html            — なかまたち一覧: 仲間キャラ紹介カード一覧（独立カテゴリ）
 /about.html              — About: キャラ紹介 + バリエーション + SNS
+/privacy.html            — プライバシーポリシー（フッターからリンク）
+/contact.html            — お問い合わせフォーム（フッターからリンク）
 ```
 
 ---

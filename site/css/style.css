@@ -42,7 +42,6 @@ img { display: block; max-width: 100%; }
 .nav-links a.active-history { color: #9b8a7a; border-bottom: 2px solid #9b8a7a; padding-bottom: 2px; }
 .nav-links a.active-friends { color: #b98a95; border-bottom: 2px solid #b98a95; padding-bottom: 2px; }
 .nav-links a.active-about { color: #3a3632; border-bottom: 2px solid #3a3632; padding-bottom: 2px; }
-.nav-links a.active-contact { color: #3a3632; border-bottom: 2px solid #3a3632; padding-bottom: 2px; }
 
 /* Nav toggle (hamburger, mobile only) */
 .nav-toggle {

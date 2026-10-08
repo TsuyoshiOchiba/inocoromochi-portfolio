@@ -14,7 +14,6 @@ function createNav(activePage) {
     { href: base + 'history.html', label: '住吉考', active: 'history' },
     { href: base + 'friends.html', label: 'なかまたち', active: 'friends' },
     { href: base + 'about.html', label: 'About', active: 'about' },
-    { href: base + 'contact.html', label: 'お問い合わせ', active: 'contact' },
   ];
   
   var linksHtml = pages.map(function(p) {
