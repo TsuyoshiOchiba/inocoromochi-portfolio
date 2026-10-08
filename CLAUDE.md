@@ -16,7 +16,7 @@
 
 ### 適用スコープ
 
-- worktree必須ルールの対象は **`site/**` と `DESIGN_SYSTEM.md` のみ**。
+- worktree必須ルールの対象は **`site/**`、`functions/**`、`DESIGN_SYSTEM.md`**。
 - `README.md`、`CLAUDE.md`、`.claude/**` などハーネス/運用系ファイルは対象外。通常の作業ディレクトリで直接編集してよい。
 
 ### 関連ファイル
