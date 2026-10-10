@@ -76,7 +76,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   result.textContent = '';
   result.className = 'form-result';
 
-  fetch('/api/contact', {
+  fetch('https://mail.inocoromochi.com/send', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
