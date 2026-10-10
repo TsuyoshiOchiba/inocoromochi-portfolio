@@ -56,8 +56,9 @@ img { display: block; max-width: 100%; }
 /* Footer */
 .footer {
   padding: 32px 48px; display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid rgba(58,54,50,0.06);
+  flex-wrap: wrap; border-top: 1px solid rgba(58,54,50,0.06);
 }
+.footer-about { font-size: 12px; color: rgba(58,54,50,0.45); margin-bottom: 12px; width: 100%; text-align: center; }
 .footer-copy { font-size: 11px; color: rgba(58,54,50,0.55); }
 .footer-links { display: flex; gap: 16px; align-items: center; }
 .footer-links a { font-size: 12px; color: rgba(58,54,50,0.65); transition: color 0.2s; }
@@ -326,6 +327,7 @@ img { display: block; max-width: 100%; }
 .about-hero-img { width: 220px; height: auto; object-fit: contain; filter: drop-shadow(0 6px 24px rgba(58,54,50,0.08)); }
 .about-intro { max-width: 640px; margin: 0 auto; padding: 0 48px 48px; }
 .about-characters { max-width: 700px; margin: 0 auto; padding: 0 48px 56px; }
+.about-site { max-width: 640px; margin: 0 auto; padding: 0 48px 48px; }
 .about-sns { max-width: 640px; margin: 0 auto; padding: 0 48px 64px; }
 
 .kawaraban-hero { padding: 48px 48px 40px; display: flex; align-items: center; justify-content: center; gap: 48px; max-width: 860px; margin: 0 auto; }
