@@ -438,7 +438,7 @@ img { display: block; max-width: 100%; }
   .blog-preview-item span:first-child { flex: 1; min-width: 0; }
   .feature-card { width: 100%; }
   .sns-bar { flex-direction: column; gap: 16px; }
-  .about-hero, .about-intro, .about-characters, .about-sns, .kawaraban-features, .contact-section, .legal-section { padding-left: 24px; padding-right: 24px; }
+  .about-hero, .about-intro, .about-characters, .about-site, .about-sns, .kawaraban-features, .contact-section, .legal-section { padding-left: 24px; padding-right: 24px; }
   .contact-form { padding: 28px 24px; }
   .about-hero-img { width: 160px; }
   .kawaraban-hero { flex-direction: column; padding: 32px 24px 0; gap: 20px; text-align: center; }
