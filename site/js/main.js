@@ -40,6 +40,7 @@ function createFooter() {
   
   var base = document.body.dataset.base || '';
   footer.innerHTML =
+    '<div class="footer-about klee">ニュース・音楽・郷土史を届ける、いのころもちのポートレートサイト</div>' +
     '<span class="footer-copy">© ' + new Date().getFullYear() + ' いのころもち.com</span>' +
     '<div class="footer-links">' +
       '<a href="' + base + 'privacy.html">プライバシーポリシー</a>' +
@@ -51,9 +52,45 @@ function createFooter() {
     '</div>';
 }
 
+/* JSON-LD (WebSite + Organization) */
+function injectJsonLd() {
+  var ld = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        'name': 'いのころもち.com',
+        'url': 'https://inocoromochi.com/',
+        'description': 'ニュース配信「かわらばん」・オリジナル楽曲の作曲活動・大阪住吉の郷土史「住吉考」を届ける、いのころもちのポートレートサイト。'
+      },
+      {
+        '@type': 'Organization',
+        'name': 'いのころもち.com',
+        'url': 'https://inocoromochi.com/',
+        'logo': 'https://inocoromochi.com/assets/images/ogp-brand.png',
+        'contactPoint': {
+          '@type': 'ContactPoint',
+          'url': 'https://inocoromochi.com/contact.html',
+          'contactType': 'customer support'
+        },
+        'sameAs': [
+          'https://x.com/inocoro_com',
+          'https://www.youtube.com/@tsuyoshiochiba1009',
+          'https://github.com/TsuyoshiOchiba/inocoromochi-portfolio'
+        ]
+      }
+    ]
+  };
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(ld);
+  document.head.appendChild(script);
+}
+
 /* Init */
 document.addEventListener('DOMContentLoaded', function() {
   const activePage = document.body.dataset.page || '';
   createNav(activePage);
   createFooter();
+  injectJsonLd();
 });
