@@ -9,7 +9,7 @@ function createNav(activePage) {
   var base = document.body.dataset.base || '';
   
   var pages = [
-    { href: base + 'kawaraban.html', label: 'プロダクト', active: 'product' },
+    { href: base + 'products.html', label: 'プロダクト', active: 'product' },
     { href: base + 'music.html', label: '作曲活動', active: 'music' },
     { href: base + 'history.html', label: '住吉考', active: 'history' },
     { href: base + 'friends.html', label: 'なかまたち', active: 'friends' },

@@ -275,9 +275,10 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 4. `index.html` の「最新の記事」セクションを更新（最新3件表示）
 
 ### 新しいプロダクトを追加する
-1. 専用HTMLページを作成
-2. キャラクター画像を `assets/images/` に追加
-3. `index.html` のカテゴリカードセクションに追加
+1. 専用HTMLページを作成（既存の `kawaraban.html` や `tasklist.html` をコピー）
+2. キャラクター画像・OGP画像を `assets/images/` に追加
+3. `products.html` の `.product-cards` にカードを追加
+4. `sitemap.xml` にURLを追加
 
 ### 新しい仲間キャラクターを追加する
 1. キャラクター画像を `assets/images/` に `friend-〇〇.png` として追加
