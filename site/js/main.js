@@ -87,10 +87,21 @@ function injectJsonLd() {
   document.head.appendChild(script);
 }
 
+/* Golden Inocoromochi (0.005% chance) */
+function tryGoldenInocoromochi() {
+  var img = document.querySelector('.hero-image');
+  if (!img) return;
+  if (Math.random() < 0.00005) {
+    img.classList.add('golden');
+    img.setAttribute('alt', 'ゴールデンいのころもち');
+  }
+}
+
 /* Init */
 document.addEventListener('DOMContentLoaded', function() {
   const activePage = document.body.dataset.page || '';
   createNav(activePage);
   createFooter();
   injectJsonLd();
+  tryGoldenInocoromochi();
 });
