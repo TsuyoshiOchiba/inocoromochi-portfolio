@@ -37,12 +37,20 @@ site/
 
 各ページの `<nav class="nav">` と `<footer class="footer">` は空の状態でHTMLに書かれており、`js/main.js` の `DOMContentLoaded` 時に中身が注入される。
 
-- `<body data-base="..." data-page="...">` の2つの属性で挙動が決まる
-  - `data-base`: サブディレクトリ（`music/` や `history/`）にあるページでは `"../"` を指定し、ナビのリンクを相対パスで正しく解決する
+- ナビ・フッターのリンクはルート相対・`.html`なし（`/products`, `/history` など）で生成する。どの階層のURL（404ページを含む）で表示されても同じリンク先に解決される
+- `<body data-base="..." data-page="...">` の属性
+  - `data-base`: サブディレクトリ（`music/` や `history/`）にあるページでは `"../"`。現在 `main.js` はこの値を使っていない（旧仕様の名残。既存ページとの統一のため残している）
   - `data-page`: `product` / `music` / `history` / `about` のいずれかを指定すると、対応するナビリンクにアクティブ状態（カテゴリカラー + 下線）が付く
 - フッターのSNSリンク（X/Twitter, GitHub, YouTube）は `js/main.js` 内に直書き。実際のURLが決まったら `createFooter()` 内の `href="#"` を差し替える
 
 新規ページを作る際は、既存ページの `<nav class="nav"></nav>` / `<footer class="footer"></footer>` の空要素とscriptタグ、`data-base` / `data-page` 属性をそのままコピーすること。
+
+### 内部リンクの書き方
+
+サイト内ページへのリンクは **`/` から始めて `.html` を付けない**（例: `/history/ikkyu-shousaian`、`/contact`、トップは `/`）。
+- `history.html` や `../contact.html` のような相対パス・`.html`付きは使わない。`.html`付きURLはCloudflare Pagesで308リダイレクトされ、Search Consoleで「リダイレクトエラー」「ページにリダイレクトがあります」の原因になる。相対パスは404ページなど想定外の階層で表示されたとき `/history/contact.html` のような存在しないURLを生み、404が連鎖する
+- CSS/JS/画像のパス（`css/style.css`, `../assets/images/...`）は従来どおり相対パスのままでよい
+- canonical / og:url / sitemap も同じく`.html`なしの絶対URL（`https://inocoromochi.com/...`）
 
 ## 更新手順
 

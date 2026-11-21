@@ -244,18 +244,20 @@ https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 
 ## ページ構成
 
+URL（ファイル）— 内容。内部リンクは左列のURL（`/`始まり・`.html`なし）で書く。
+
 ```
 / (index.html)           — トップ: ヒーロー + 4カテゴリカード + 最新記事
-/music.html              — 作曲活動一覧: カードグリッド
-/music/espoir.html       — 楽曲詳細: YouTube埋め込み + 説明
-/music/tanpopo.html      — 楽曲詳細
-/history.html            — 住吉考一覧: 記事リスト
-/history/sumiyoshi-tanjouseki.html — 記事詳細テンプレート
-/kawaraban.html          — かわらばん紹介: ヒーロー + 特徴
-/friends.html            — なかまたち一覧: 仲間キャラ紹介カード一覧（独立カテゴリ）
-/about.html              — About: キャラ紹介 + バリエーション + SNS
-/privacy.html            — プライバシーポリシー（フッターからリンク）
-/contact.html            — お問い合わせフォーム（フッターからリンク）
+/music (music.html)      — 作曲活動一覧: カードグリッド
+/music/espoir            — 楽曲詳細: YouTube埋め込み + 説明
+/music/tanpopo           — 楽曲詳細
+/history (history.html)  — 住吉考一覧: 記事リスト
+/history/sumiyoshi-tanjouseki — 記事詳細テンプレート
+/kawaraban               — かわらばん紹介: ヒーロー + 特徴
+/friends                 — なかまたち一覧: 仲間キャラ紹介カード一覧（独立カテゴリ）
+/about                   — About: キャラ紹介 + バリエーション + SNS
+/privacy                 — プライバシーポリシー（フッターからリンク）
+/contact                 — お問い合わせフォーム（フッターからリンク）
 ```
 
 ---
