@@ -5,15 +5,13 @@ function createNav(activePage) {
   const nav = document.querySelector('.nav');
   if (!nav) return;
   
-  // Read base path from body data attribute
-  var base = document.body.dataset.base || '';
-  
+  // Root-relative clean URLs: resolve correctly from any path (incl. the 404 page)
   var pages = [
-    { href: base + 'products.html', label: 'プロダクト', active: 'product' },
-    { href: base + 'music.html', label: '作曲活動', active: 'music' },
-    { href: base + 'history.html', label: '住吉考', active: 'history' },
-    { href: base + 'friends.html', label: 'なかまたち', active: 'friends' },
-    { href: base + 'about.html', label: 'About', active: 'about' },
+    { href: '/products', label: 'プロダクト', active: 'product' },
+    { href: '/music', label: '作曲活動', active: 'music' },
+    { href: '/history', label: '住吉考', active: 'history' },
+    { href: '/friends', label: 'なかまたち', active: 'friends' },
+    { href: '/about', label: 'About', active: 'about' },
   ];
   
   var linksHtml = pages.map(function(p) {
@@ -22,7 +20,7 @@ function createNav(activePage) {
   }).join('');
 
   nav.innerHTML =
-    '<a href="' + base + 'index.html" class="nav-logo">いのころもち.com</a>' +
+    '<a href="/" class="nav-logo">いのころもち.com</a>' +
     '<button class="nav-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>' +
     '<div class="nav-links">' + linksHtml + '</div>';
 
@@ -37,14 +35,13 @@ function createNav(activePage) {
 function createFooter() {
   const footer = document.querySelector('.footer');
   if (!footer) return;
-  
-  var base = document.body.dataset.base || '';
+
   footer.innerHTML =
     '<div class="footer-about klee">ニュース・音楽・郷土史を届ける、いのころもちのポートレートサイト</div>' +
     '<span class="footer-copy">© ' + new Date().getFullYear() + ' いのころもち.com</span>' +
     '<div class="footer-links">' +
-      '<a href="' + base + 'privacy.html">プライバシーポリシー</a>' +
-      '<a href="' + base + 'contact.html">お問い合わせ</a>' +
+      '<a href="/privacy">プライバシーポリシー</a>' +
+      '<a href="/contact">お問い合わせ</a>' +
       '<span class="footer-sep">|</span>' +
       '<a href="https://x.com/inocoro_com" target="_blank" rel="noopener noreferrer">X / Twitter</a>' +
       '<a href="https://github.com/TsuyoshiOchiba/inocoromochi-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>' +
@@ -70,7 +67,7 @@ function injectJsonLd() {
         'logo': 'https://inocoromochi.com/assets/images/ogp-brand.png',
         'contactPoint': {
           '@type': 'ContactPoint',
-          'url': 'https://inocoromochi.com/contact.html',
+          'url': 'https://inocoromochi.com/contact',
           'contactType': 'customer support'
         },
         'sameAs': [

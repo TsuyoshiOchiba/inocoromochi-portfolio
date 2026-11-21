@@ -25,7 +25,7 @@ site/history/<slug>.html （公開ページ本体）
 
 ### 3. 既存記事のデザインを踏襲して本文HTMLを書く
 `site/history/` 内の既存記事（あれば）を読み、以下のパターンをコピーする。
-- `<body data-base="../" data-page="history">` / breadcrumb（`../index.html` → `../history.html` → 現在ページ） / `badge badge-lg badge-history` + 日付 / `<h1>`
+- `<body data-base="../" data-page="history">` / breadcrumb（`/` → `/history` → 現在ページ。サイト内リンクは必ず `/` 始まり・`.html`なし。一覧やトップから記事へのリンクも `/history/<slug>`） / `badge badge-lg badge-history` + 日付 / `<h1>`
 - 本文は `content-card-lg` の中に `<p class="klee" style="font-size:15px;line-height:2.2;margin-bottom:20px">` を並べる。長めの記事はセクション見出しを `<h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin-bottom:16px">` で区切る。
 - 参考文献は本文末尾に `<div style="margin-top:36px;padding-top:24px;border-top:1px solid rgba(58,54,50,0.08)">` + `<ul>` でまとめる。
 - **タイトルは記事が実際に扱う範囲より風呂敷を広げない。**「日本史700年」のような大きすぎる主語ではなく、扱う具体的な主体（誰と誰の関係、何の由来か）を主語にする。案が複数出せる場合はユーザーに選んでもらう。
@@ -55,7 +55,7 @@ site/history/<slug>.html （公開ページ本体）
 
 1. `blog/原稿/<日付>/` の下に `css/` `js/` `assets/images/` を作り、`site/css/style.css`・`site/js/main.js`・記事で使う画像ファイルをコピーする。
 2. コピーしたHTML内のパスを書き換える: `../css/` → `css/`、`../js/` → `js/`、`../assets/images/` → `assets/images/`、`<body data-base="../" ...>` → `data-base=""`。
-3. breadcrumb / 「記事一覧に戻る」の `../index.html` `../history.html` は site内の別ページへのリンクなので、ここではリンク切れのままで良い（見た目には影響しない）。
+3. breadcrumb / 「記事一覧に戻る」の `/` `/history` は site内の別ページへのリンクなので、ここではリンク切れのままで良い（見た目には影響しない）。
 4. **`blog/原稿/<日付>/` フォルダ一式を、worktree内だけでなくメインの作業フォルダ（`git worktree list` の先頭に出る、`.claude/worktrees/` を含まない方のパス）にも同じ内容でコピーする。** `blog/原稿/` はユーザーが最終確認のために開く場所であり、worktreeのパスは階層が深くエージェント都合で作られたものなので、ユーザーが普段見ている場所に置く。メイン側にコピーした `blog/原稿/` はworktreeのマージ対象ではない（`.gitignore`等での追跡有無に関わらず、あくまで確認用の複製）ため、リリース後もそのまま残しておいてよい。
 
 これで `blog/原稿/<日付>/<slug>.html` をダブルクリックすればフォント・レイアウト・画像込みで正しく表示される。
